@@ -20,7 +20,9 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     color: white;
-    background: url('images/bg-intro-mobile.png') no-repeat center var(--red);
+    background: url('images/bg-intro-mobile.png') repeat center var(--red);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1, p {
@@ -34,13 +36,23 @@ h1, p {
     padding: 5.75rem 1.5rem 4.25rem;
 }
 
+.row {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+}
+
+.col {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
 .page-body {
     text-align: center;
 }
 
 .page-title {
     font-size: 1.75rem;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.3;
     margin-bottom: 1.375rem;
 }
@@ -55,6 +67,7 @@ h1, p {
     background: var(--blue);
     margin-bottom: 1.5rem;
     border-radius: 0.625rem;
+    text-align: center;
 }
 
 .page-notice p {
@@ -75,35 +88,49 @@ h1, p {
 .form-control {
     display: block;
     width: 100%;
-    padding: 1.125rem 1.125rem 0.875rem 1.125rem;
+    padding: 1.125rem 1.125rem 0.9375rem 1.125rem;
     font-size: 0.875rem;
     font-weight: 600;
     line-height: 1.5;
-    color: var(--grayish-blue);
+    color: var(--dark-blue);
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    border-radius: 0.375rem;
+    transition: border-color 0.15s;
 }
 
-.button {
-    font-size: 15px;
+.form-control:focus {
+    border-color: var(--dark-blue);
+    outline: 0;
+}
+
+.btn {
+    font-size: 0.9375rem;
+    font-weight: 400;
     line-height: 1.6;
-    border: 0;
-    color: white;
-    background-color: var(--green);
-    margin-bottom: 0.625rem;
-    padding: 1.0625rem 1rem 0.9375rem 1rem;
-    border-radius: 0.25rem;
-    text-transform: uppercase;
     display: block;
     width: 100%;
-    letter-spacing: 0.08em;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: 0;
+    background-color: var(--green);
     box-shadow: inset 0 -0.25rem 0 hsl(0 0% 0% / 0.1);
+    margin-bottom: 0.625rem;
+    padding: 1.0625rem 1rem 0.9375rem 1rem;
+    border-radius: 0.375rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.15s, background-color 0.15s;
 }
 
 .form-note {
@@ -148,4 +175,58 @@ h1, p {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 1158px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .col {
+        flex: 1;
+    }
+
+    .col-form {
+        flex: 1 0 588px;
+        max-width: 588px;
+    }
+
+    .page-title {
+        font-size: 3.125rem;
+        line-height: 1.1;
+        margin-bottom: 1.75rem;
+    }
+
+    .page-body {
+        text-align: left;
+    }
+
+    .page-text {
+        margin-bottom: 0;
+    }
+
+    .form {
+        padding: 2.5rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.25rem;
+    }
+
+    .form-control {
+        padding-left: 1.875rem;
+        padding-right: 1.875rem;
+    }
+
+    .btn {
+        margin-bottom: 0.875rem;
+    }
 }
