@@ -1,0 +1,22 @@
+{
+  "name": "intro-component-with-signup-form-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Intro component with sign up form coding challenge](./design/desktop-preview.jpg)",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byronbyron/intro-component-with-signup-form.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/byronbyron/intro-component-with-signup-form/issues"
+  },
+  "homepage": "https://github.com/byronbyron/intro-component-with-signup-form#readme",
+  "dependencies": {
+    "just-validate": "^3.4.0",
+    "normalize.css": "^8.0.1"
+  }
+}
