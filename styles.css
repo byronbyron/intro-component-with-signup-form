@@ -20,7 +20,7 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     color: white;
-    background-color: var(--red);
+    background: url('images/bg-intro-mobile.png') no-repeat center var(--red);
 }
 
 h1, p {
@@ -31,7 +31,7 @@ h1, p {
     max-width: 720px;
     margin-left: auto;
     margin-right: auto;
-    padding: 5.625rem 1.5rem;
+    padding: 5.75rem 1.5rem 4.25rem;
 }
 
 .page-body {
@@ -51,10 +51,10 @@ h1, p {
 
 .page-notice {
     font-size: 0.9375rem;
-    padding: 1.125rem 4rem 1rem;
+    padding: 1.125rem 15% 1rem;
     background: var(--blue);
     margin-bottom: 1.5rem;
-    border-radius: 0.5rem;
+    border-radius: 0.625rem;
 }
 
 .page-notice p {
@@ -62,8 +62,83 @@ h1, p {
     margin-bottom: 0;
 }
 
+.form {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 1.125rem 1.125rem 0.875rem 1.125rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--grayish-blue);
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.button {
+    font-size: 15px;
+    line-height: 1.6;
+    border: 0;
+    color: white;
+    background-color: var(--green);
+    margin-bottom: 0.625rem;
+    padding: 1.0625rem 1rem 0.9375rem 1rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    letter-spacing: 0.08em;
+    box-shadow: inset 0 -0.25rem 0 hsl(0 0% 0% / 0.1);
+}
+
+.form-note {
+    font-size: 0.6875rem;
+    line-height: 1.8;
+    color: var(--grayish-blue);
+    margin-bottom: 0;
+    padding: 0 5%;
+    text-align: center;
+}
+
+.form-note a {
+    font-weight: 700;
+    color: var(--red);
+    text-decoration: none;
+}
+
 .footer {
     display: none;
+}
+
+.shadow {
+    box-shadow: 0 0.5rem 0 hsl(0 0% 0% / 0.1);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .attribution {
