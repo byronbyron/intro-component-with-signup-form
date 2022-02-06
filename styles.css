@@ -4,6 +4,7 @@
 :root {
     --red: hsl(0, 100%, 74%);
     --green: hsl(154, 59%, 51%);
+    --light-green: hsl(154, 59%, 70%);
     --blue: hsl(248, 32%, 49%);
     --dark-blue: hsl(249, 10%, 26%);
     --grayish-blue: hsl(246, 25%, 77%);
@@ -110,7 +111,7 @@ h1, p {
 
 .btn {
     font-size: 0.9375rem;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.6;
     display: block;
     width: 100%;
@@ -133,8 +134,14 @@ h1, p {
     transition: color 0.15s, background-color 0.15s;
 }
 
+.btn:hover,
+.btn:focus {
+    background-color: var(--light-green);
+}
+
 .form-note {
     font-size: 0.6875rem;
+    font-weight: 500;
     line-height: 1.8;
     color: var(--grayish-blue);
     margin-bottom: 0;
@@ -146,6 +153,11 @@ h1, p {
     font-weight: 700;
     color: var(--red);
     text-decoration: none;
+}
+
+.form-note a:hover,
+.form-note a:focus {
+    text-decoration: underline;
 }
 
 .footer {
@@ -178,6 +190,10 @@ h1, p {
 }
 
 @media (min-width: 992px) {
+    body {
+        background-image: url('images/bg-intro-desktop.png');
+    }
+
     .container {
         max-width: 1158px;
         padding-top: 0;
@@ -200,13 +216,14 @@ h1, p {
     }
 
     .page-title {
-        font-size: 3.125rem;
-        line-height: 1.1;
+        font-size: 3.0625rem;
+        line-height: 1.12;
         margin-bottom: 1.75rem;
     }
 
     .page-body {
         text-align: left;
+        margin-top: 2px;
     }
 
     .page-text {
