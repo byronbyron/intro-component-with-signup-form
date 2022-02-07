@@ -266,4 +266,31 @@ h1, p {
     .btn {
         margin-bottom: 0.875rem;
     }
+
+    .slide-right-1 {
+        animation: .5s .25s slideright backwards ease-out;
+    }
+
+    .slide-right-2 {
+        animation: .5s .5s slideright backwards ease-out;
+    }
+
+    .slide-down-1 {
+        animation: .5s 1s slidedown backwards ease-out;   
+    }
+
+    @keyframes slideright {
+        from {
+            transform: translate3d(2rem, 0, 0);
+            opacity: 0;
+        }
+    }
+
+    @keyframes slidedown {
+        from {
+            transform: translate3d(0, -2rem, 0);
+            opacity: 0;
+        }
+    }
+
 }
